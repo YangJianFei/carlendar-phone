@@ -1,4 +1,7 @@
 
+$("#showcarlendar").on("click",function(){
+    $(".actionSheet_wrap").show();
+});
 getcalendar();
 //确定按钮点击事件
     $(".calendar_sure").on("click",function(){
@@ -15,7 +18,7 @@ getcalendar();
         var time=$(".calendar_select_hour li[class*='calendar_active']").text()+":"+$(".calendar_select_minute li[class*='calendar_active']").text();
         var week=getWeekformDate(year+"-"+month+"-"+day);
         var date=new Date(year+"-"+month+"-"+day+" "+time);
-            
+        tip(date,2000,$("#right"));
       
     });
     
