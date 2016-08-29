@@ -12,145 +12,140 @@
 <body style="display:flex;justify-content:center;align-items:center;">
 <a href="javascript:;" id="showcarlendar" style="color:#286090;cursor:pointer;">点我展示控件</a>
 <div style="width:400px;height:600px;">
-    <div id="actionSheet_wrap" style="display:none;">
-        <div class="weui_mask_transition weui_fade_toggle" id="mask" style="display:block;"></div>
-        <div class="weui_actionsheet weui_actionsheet_toggle" id="weui_actionsheet" style="background:white">
-            <div class="calendar_info">
-                <div class="calendar_finally"></div>
-                <div class="calendar_sure">确定</div>
+    <div class="calendar_info">
+        <div class="calendar_finally"></div>
+        <div class="calendar_sure">确定</div>
+    </div>
+    <div class="calendar_detail">
+        <div class="calendar_year_day">
+            <ul>
+                <li class="be_year" style="width:20%">年</li>
+                <li class="be_month" style="width:10%">月</li>
+                <li class="be_day" style="width:26%">日/星期</li>
+                <li class="be_hour" style="width:10%">时</li>
+                <li class="be_minute" style="width:10%">分</li>
+            </ul>
+        </div>
+        <div class="calendar_select">
+            <div class="calendar_select_year">
+                <ul>
+                    <li id="year_1" data-id="1"></li>
+                    <li id="year_2" data-id="2"></li>
+                    <li id="year_3" data-id="3"></li>
+                    <li id="year_4" data-id="4"></li>
+                    <li id="year_5" data-id="5"></li>
+                    <li id="year_6" data-id="6"></li>
+                    <li id="year_7" data-id="7"></li>
+                    <li id="year_8" data-id="8"></li>
+                    <li id="year_9" data-id="9"></li>
+                    <li id="year_10" data-id="10"></li>
+                    <li id="year_11" data-id="11"></li>
+                    <li id="year_12" data-id="12"></li>
+                    <li id="year_13" data-id="13"></li>
+                    <li id="year_14" data-id="14"></li>
+                    <li id="year_15" data-id="15"></li>
+                    <li id="year_16" data-id="16"></li>
+                    <li id="year_17" data-id="17"></li>
+                    <li id="year_18" data-id="18"></li>
+                    <li id="year_19" data-id="19"></li>
+                    <li id="year_20" data-id="20"></li>
+                    <li id="year_21" data-id="21"></li>
+                </ul>
             </div>
-            <div class="calendar_detail">
-                <div class="calendar_year_day">
-                    <ul>
-                        <li class="be_year" style="width:20%">年</li>
-                        <li class="be_month" style="width:10%">月</li>
-                        <li class="be_day" style="width:26%">日/星期</li>
-                        <li class="be_hour" style="width:10%">时</li>
-                        <li class="be_minute" style="width:10%">分</li>
-                    </ul>
-                </div>
-                <div class="calendar_select">
-                    <div class="calendar_select_year">
-                        <ul>
-                            <li id="year_1" data-id="1"></li>
-                            <li id="year_2" data-id="2"></li>
-                            <li id="year_3" data-id="3"></li>
-                            <li id="year_4" data-id="4"></li>
-                            <li id="year_5" data-id="5"></li>
-                            <li id="year_6" data-id="6"></li>
-                            <li id="year_7" data-id="7"></li>
-                            <li id="year_8" data-id="8"></li>
-                            <li id="year_9" data-id="9"></li>
-                            <li id="year_10" data-id="10"></li>
-                            <li id="year_11" data-id="11"></li>
-                            <li id="year_12" data-id="12"></li>
-                            <li id="year_13" data-id="13"></li>
-                            <li id="year_14" data-id="14"></li>
-                            <li id="year_15" data-id="15"></li>
-                            <li id="year_16" data-id="16"></li>
-                            <li id="year_17" data-id="17"></li>
-                            <li id="year_18" data-id="18"></li>
-                            <li id="year_19" data-id="19"></li>
-                            <li id="year_20" data-id="20"></li>
-                            <li id="year_21" data-id="21"></li>
-                        </ul>
-                    </div>
-                    <div class="calendar_select_month">
-                        <ul>
-                            <li id="month_1"  data-id="1">1</li>
-                            <li id="month_2"  data-id="2">2</li>
-                            <li id="month_3"  data-id="3">3</li>
-                            <li id="month_4"  data-id="4">4</li>
-                            <li id="month_5"  data-id="5">5</li>
-                            <li id="month_6"  data-id="6">6</li>
-                            <li id="month_7"  data-id="7">7</li>
-                            <li id="month_8"  data-id="8">8</li>
-                            <li id="month_9"  data-id="9">9</li>
-                            <li id="month_10" data-id="10">10</li>
-                            <li id="month_11" data-id="11">11</li>
-                            <li id="month_12" data-id="12">12</li>
-                        </ul>
-                    </div>
-                    <div class="calendar_select_day">
-                        <ul>
-                            <li id="day_1" data-id="1" data-date="0"></li>
-                            <li id="day_2" data-id="2" data-date="1"></li>
-                            <li id="day_3" data-id="3" data-date="2"></li>
-                            <li id="day_4" data-id="4" data-date="3"></li>
-                            <li id="day_5" data-id="5" data-date="4"></li>
-                            <li id="day_6" data-id="6" data-date="5"></li>
-                            <li id="day_7" data-id="7" data-date="6"></li>
-                            <li id="day_8" data-id="8" data-date="0"></li>
-                            <li id="day_9" data-id="9" data-date="1"></li>
-                            <li id="day_10" data-id="10" data-date="2"></li>
-                            <li id="day_11" data-id="11" data-date="3"></li>
-                            <li id="day_12" data-id="12" data-date="4"></li>
-                            <li id="day_13" data-id="13" data-date="5"></li>
-                            <li id="day_14" data-id="14" data-date="6"></li>
-                            <li id="day_15" data-id="15" data-date="0"></li>
-                            <li id="day_16" data-id="16" data-date="1"></li>
-                            <li id="day_17" data-id="17" data-date="2"></li>
-                            <li id="day_18" data-id="18" data-date="3"></li>
-                            <li id="day_19" data-id="19" data-date="4"></li>
-                            <li id="day_20" data-id="20" data-date="5"></li>
-                            <li id="day_21" data-id="21" data-date="6"></li>
-                            <li id="day_22" data-id="22" data-date="0"></li>
-                            <li id="day_23" data-id="23" data-date="1"></li>
-                            <li id="day_24" data-id="24" data-date="2"></li>
-                            <li id="day_25" data-id="25" data-date="3"></li>
-                            <li id="day_26" data-id="26" data-date="4"></li>
-                            <li id="day_27" data-id="27" data-date="5"></li>
-                            <li id="day_28" data-id="28" data-date="6"></li>
-                            <li id="day_29" data-id="29" data-date="0"></li>
-                            <li id="day_30" data-id="30" data-date="1"></li>
-                            <li id="day_31" data-id="31" data-date="2"></li>
-                        </ul>
-                    </div>
-                    <div class="calendar_select_hour">
-                        <ul>
-                            <li data-id="1">00</li>
-                            <li data-id="2">01</li>
-                            <li data-id="3">02</li>
-                            <li data-id="4">03</li>
-                            <li data-id="5">04</li>
-                            <li data-id="6">05</li>
-                            <li data-id="7">06</li>
-                            <li data-id="8">07</li>
-                            <li data-id="9">08</li>
-                            <li data-id="10">09</li>
-                            <li data-id="11">10</li>
-                            <li data-id="12">11</li>
-                            <li data-id="13">12</li>
-                            <li data-id="14">13</li>
-                            <li data-id="15">14</li>
-                            <li data-id="16">15</li>
-                            <li data-id="17">16</li>
-                            <li data-id="18">17</li>
-                            <li data-id="19">18</li>
-                            <li data-id="20">19</li>
-                            <li data-id="21">20</li>
-                            <li data-id="22">21</li>
-                            <li data-id="23">22</li>
-                            <li data-id="24">23</li>
-                        </ul>
-                    </div>
-                    <div class="calendar_select_minute">
-                        <ul>
-                            <li data-id="1">00</li>
-                            <li data-id="2">05</li>
-                            <li data-id="3">10</li>
-                            <li data-id="4">15</li>
-                            <li data-id="5">20</li>
-                            <li data-id="6">25</li>
-                            <li data-id="7">30</li>
-                            <li data-id="8">35</li>
-                            <li data-id="9">40</li>
-                            <li data-id="10">45</li>
-                            <li data-id="11">50</li>
-                            <li data-id="12">55</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="calendar_select_month">
+                <ul>
+                    <li id="month_1"  data-id="1">1</li>
+                    <li id="month_2"  data-id="2">2</li>
+                    <li id="month_3"  data-id="3">3</li>
+                    <li id="month_4"  data-id="4">4</li>
+                    <li id="month_5"  data-id="5">5</li>
+                    <li id="month_6"  data-id="6">6</li>
+                    <li id="month_7"  data-id="7">7</li>
+                    <li id="month_8"  data-id="8">8</li>
+                    <li id="month_9"  data-id="9">9</li>
+                    <li id="month_10" data-id="10">10</li>
+                    <li id="month_11" data-id="11">11</li>
+                    <li id="month_12" data-id="12">12</li>
+                </ul>
+            </div>
+            <div class="calendar_select_day">
+                <ul>
+                    <li id="day_1" data-id="1" data-date="0"></li>
+                    <li id="day_2" data-id="2" data-date="1"></li>
+                    <li id="day_3" data-id="3" data-date="2"></li>
+                    <li id="day_4" data-id="4" data-date="3"></li>
+                    <li id="day_5" data-id="5" data-date="4"></li>
+                    <li id="day_6" data-id="6" data-date="5"></li>
+                    <li id="day_7" data-id="7" data-date="6"></li>
+                    <li id="day_8" data-id="8" data-date="0"></li>
+                    <li id="day_9" data-id="9" data-date="1"></li>
+                    <li id="day_10" data-id="10" data-date="2"></li>
+                    <li id="day_11" data-id="11" data-date="3"></li>
+                    <li id="day_12" data-id="12" data-date="4"></li>
+                    <li id="day_13" data-id="13" data-date="5"></li>
+                    <li id="day_14" data-id="14" data-date="6"></li>
+                    <li id="day_15" data-id="15" data-date="0"></li>
+                    <li id="day_16" data-id="16" data-date="1"></li>
+                    <li id="day_17" data-id="17" data-date="2"></li>
+                    <li id="day_18" data-id="18" data-date="3"></li>
+                    <li id="day_19" data-id="19" data-date="4"></li>
+                    <li id="day_20" data-id="20" data-date="5"></li>
+                    <li id="day_21" data-id="21" data-date="6"></li>
+                    <li id="day_22" data-id="22" data-date="0"></li>
+                    <li id="day_23" data-id="23" data-date="1"></li>
+                    <li id="day_24" data-id="24" data-date="2"></li>
+                    <li id="day_25" data-id="25" data-date="3"></li>
+                    <li id="day_26" data-id="26" data-date="4"></li>
+                    <li id="day_27" data-id="27" data-date="5"></li>
+                    <li id="day_28" data-id="28" data-date="6"></li>
+                    <li id="day_29" data-id="29" data-date="0"></li>
+                    <li id="day_30" data-id="30" data-date="1"></li>
+                    <li id="day_31" data-id="31" data-date="2"></li>
+                </ul>
+            </div>
+            <div class="calendar_select_hour">
+                <ul>
+                    <li data-id="1">00</li>
+                    <li data-id="2">01</li>
+                    <li data-id="3">02</li>
+                    <li data-id="4">03</li>
+                    <li data-id="5">04</li>
+                    <li data-id="6">05</li>
+                    <li data-id="7">06</li>
+                    <li data-id="8">07</li>
+                    <li data-id="9">08</li>
+                    <li data-id="10">09</li>
+                    <li data-id="11">10</li>
+                    <li data-id="12">11</li>
+                    <li data-id="13">12</li>
+                    <li data-id="14">13</li>
+                    <li data-id="15">14</li>
+                    <li data-id="16">15</li>
+                    <li data-id="17">16</li>
+                    <li data-id="18">17</li>
+                    <li data-id="19">18</li>
+                    <li data-id="20">19</li>
+                    <li data-id="21">20</li>
+                    <li data-id="22">21</li>
+                    <li data-id="23">22</li>
+                    <li data-id="24">23</li>
+                </ul>
+            </div>
+            <div class="calendar_select_minute">
+                <ul>
+                    <li data-id="1">00</li>
+                    <li data-id="2">05</li>
+                    <li data-id="3">10</li>
+                    <li data-id="4">15</li>
+                    <li data-id="5">20</li>
+                    <li data-id="6">25</li>
+                    <li data-id="7">30</li>
+                    <li data-id="8">35</li>
+                    <li data-id="9">40</li>
+                    <li data-id="10">45</li>
+                    <li data-id="11">50</li>
+                    <li data-id="12">55</li>
+                </ul>
             </div>
         </div>
     </div>
