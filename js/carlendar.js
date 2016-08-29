@@ -28,12 +28,8 @@ $(".weui_fade_toggle").on("click",function(){
 });
 
 //生成日历
-function getcalendar(year,month,day,hour,minute){
-    var today=new Date(year+"-"+month+"-"+day+" "+(checkundefined(hour)=="" ? 8:hour)+":"+(checkundefined(minute)=="" ? 30:minute));
-    if((year+"-"+month+"-"+day+" "+(checkundefined(hour)=="" ? 8:hour)+":"+(checkundefined(minute)=="" ? 30:minute)).indexOf("NaN")!=-1 || (year+"-"+month+"-"+day+" "+(checkundefined(hour)=="" ? 8:hour)+":"+(checkundefined(minute)=="" ? 30:minute)).indexOf("defin")!=-1){
-        today=new Date();
-    }
-    //var today=new Date();
+function getcalendar(){
+    var today=new Date();
     var todynumber=today.getDate();//当前天
     var todayweek=today.getDay();//今天星期
     $(".calendar_finally").html(today.getFullYear()+"-"+(today.getMonth()+1)+"-"+today.getDate()+"/"+weeks[todayweek]+" "+today.getHours()+":"+(parseInt(today.getMinutes())>=10 ? today.getMinutes():"0"+today.getMinutes()));
