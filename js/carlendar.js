@@ -1,26 +1,34 @@
 
+
+//年月日时分滚动事件
+var beforeScrollTop=0;
+var timer;
+var weeks=["周日","周一","周二","周三","周四","周五","周六"];
+
+//展示日历点击事件
 $("#showcarlendar").on("click",function(){
     $(".actionSheet_wrap").show();
 });
+
 getcalendar();
 //确定按钮点击事件
-    $(".calendar_sure").on("click",function(){
-        $("#actionSheet_wrap").hide();
-        var year=$(".calendar_select_year li[class*='calendar_active']").text();
-        var month=$(".calendar_select_month li[class*='calendar_active']").text();
-        if(month < 10){
-            month="0"+month;
-        }
-        var day=($(".calendar_select_day li[class*='calendar_active']").text()).substr(0,($(".calendar_select_day li[class*='calendar_active']").text()).indexOf("/"));
-        if(day < 10){
-            day="0"+day;
-        }
-        var time=$(".calendar_select_hour li[class*='calendar_active']").text()+":"+$(".calendar_select_minute li[class*='calendar_active']").text();
-        var week=getWeekformDate(year+"-"+month+"-"+day);
-        var date=new Date(year+"-"+month+"-"+day+" "+time);
-        tip(date,2000,$("#right"));
-      
-    });
+$(".calendar_sure").on("click",function(){
+    $("#actionSheet_wrap").hide();
+    var year=$(".calendar_select_year li[class*='calendar_active']").text();
+    var month=$(".calendar_select_month li[class*='calendar_active']").text();
+    if(month < 10){
+        month="0"+month;
+    }
+    var day=($(".calendar_select_day li[class*='calendar_active']").text()).substr(0,($(".calendar_select_day li[class*='calendar_active']").text()).indexOf("/"));
+    if(day < 10){
+        day="0"+day;
+    }
+    var time=$(".calendar_select_hour li[class*='calendar_active']").text()+":"+$(".calendar_select_minute li[class*='calendar_active']").text();
+    var week=getWeekformDate(year+"-"+month+"-"+day);
+    var date=new Date(year+"-"+month+"-"+day+" "+time);
+    tip(date,2000,$("#right"));
+  
+});
     
 //actionSheet点击空白隐藏
 $(".weui_fade_toggle").on("click",function(){
@@ -69,10 +77,6 @@ function getcalendar(){
     $(".calendar_select_minute li[data-id='"+(parseInt(today.getMinutes()/5)+1)+"']").addClass("calendar_active");
 }
 
-//年月日时分滚动事件
-var beforeScrollTop=0;
-var timer;
-var weeks=["周日","周一","周二","周三","周四","周五","周六"];
 $(".calendar_select div").on("scroll",function(){
     var _$this=this;
     clearInterval(timer);
