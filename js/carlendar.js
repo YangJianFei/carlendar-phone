@@ -5,15 +5,9 @@ var beforeScrollTop=0;
 var timer;
 var weeks=["周日","周一","周二","周三","周四","周五","周六"];
 
-//展示日历点击事件
-$("#showcarlendar").on("click",function(){
-    $(".actionSheet_wrap").show();
-});
-
 getcalendar();
 //确定按钮点击事件
 $(".calendar_sure").on("click",function(){
-    $("#actionSheet_wrap").hide();
     var year=$(".calendar_select_year li[class*='calendar_active']").text();
     var month=$(".calendar_select_month li[class*='calendar_active']").text();
     if(month < 10){
@@ -28,11 +22,6 @@ $(".calendar_sure").on("click",function(){
     var date=new Date(year+"-"+month+"-"+day+" "+time);
     tip(date,2000,$("#right"));
   
-});
-    
-//actionSheet点击空白隐藏
-$(".weui_fade_toggle").on("click",function(){
-    $("#actionSheet_wrap").hide();
 });
 
 //生成日历
