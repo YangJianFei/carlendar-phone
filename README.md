@@ -12,3 +12,4 @@ dev add
 Creating a new branch is quick AND simple
 new simple
 -- no--ff
+edit ++++
