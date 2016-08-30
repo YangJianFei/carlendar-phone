@@ -11,4 +11,5 @@ Desktop add one
 dev add
 Creating a new branch is quick AND simple
 new simple
--- no--ff
+-- no--ff  
+edit bug
