@@ -9,3 +9,4 @@ Let do it together.
 Desktop add one
 dev add
 Creating a new branch is quick AND simple
+new simple
